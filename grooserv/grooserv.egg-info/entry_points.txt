@@ -1,0 +1,3 @@
+[console_scripts]
+start-grooserv = grooserv.commands:start
+

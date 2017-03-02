@@ -1,0 +1,2 @@
+db_module=grooserv.model
+history_dir=$base/grooserv/sqlobject-history

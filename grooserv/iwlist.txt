@@ -1,0 +1,66 @@
+wlan0     Scan completed :
+          Cell 01 - Address: 00:09:5B:5B:BD:E9
+                    ESSID:" "
+                    Mode:Master
+                    Channel:7
+                    Frequency:2.442 GHz (Channel 7)
+                    Signal level=-187 dBm  
+                    Encryption key:on
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (1) : TKIP
+                        Authentication Suites (1) : PSK
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:tsf=000000272f289231
+          Cell 02 - Address: 00:13:19:36:98:30
+                    ESSID:"guest-net"
+                    Mode:Master
+                    Channel:11
+                    Frequency:2.462 GHz (Channel 11)
+                    Signal level=20/65  
+                    Encryption key:off
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 6 Mb/s; 9 Mb/s
+                              11 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:tsf=0000243eb4a08cf0
+          Cell 03 - Address: 00:13:19:64:C5:D0
+                    ESSID:"guest-net"
+                    Mode:Master
+                    Channel:11
+                    Frequency:2.462 GHz (Channel 11)
+                    Signal level=17/65  
+                    Encryption key:off
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 6 Mb/s; 9 Mb/s
+                              11 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:tsf=0000243eb447e5a6
+          Cell 04 - Address: 00:14:A5:D6:41:B6
+                    ESSID:"KPDWiFi"
+                    Mode:Master
+                    Channel:6
+                    Frequency:2.437 GHz (Channel 6)
+                    Signal level=17/65  
+                    Encryption key:on
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:tsf=0000032359914111
+          Cell 05 - Address: 00:13:46:8A:0E:1F
+                    ESSID:"seattlewifi"
+                    Mode:Master
+                    Channel:11
+                    Frequency:2.462 GHz (Channel 11)
+                    Signal level=17/65  
+                    Encryption key:off
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              12 Mb/s; 24 Mb/s; 36 Mb/s; 9 Mb/s; 18 Mb/s
+                              48 Mb/s; 54 Mb/s
+                    Extra:tsf=0000024bd0686181
+
+
