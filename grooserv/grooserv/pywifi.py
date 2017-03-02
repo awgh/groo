@@ -5,7 +5,7 @@ from subprocess import Popen,PIPE
 
 def pywifi_scan():
     try:
-        p1 = Popen(['/sbin/iwlist', 'ath1', 'scan'], stdout=PIPE, stderr=PIPE)
+        p1 = Popen(['/sbin/iwlist', 'ath0', 'scan'], stdout=PIPE, stderr=PIPE)
         IWLIST = 1
     except OSError,ose:
         print ose

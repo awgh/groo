@@ -9,12 +9,14 @@
 #############################################################################
 #                          #
 # Dirty hacks added by Ben #
+#  ----------------------  #
+# takes interface as arg   #
 ############################
 
 helpCheck();
 
 #Run the command and suppress error output
-$iwlistOut = `iwlist ath1 scan 2> /dev/null`; 
+$iwlistOut = `iwlist $ARGV[0] scan 2> /dev/null`; 
 
 @myLines = split("\n", $iwlistOut);
 @cellArr = [];
